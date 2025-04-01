@@ -18,13 +18,15 @@ Vagrant.configure("2") do |config|
         node_config.vm.provider "virtualbox" do |vb|
           vb.memory = "1024" # 1 GB RAM
           vb.cpus = 1        # 1 CPU
-          vb.customize ["modifyvm", :id, "--hddsize", 30720] # 30 GB Disk
+          vb.customize ["modifyvm", :id, "--hddsize", "30720"] # 30 GB Disk
         end
-        config.vm.synced_folder ".", "/home/vagrant/workspace", type: "virtualbox"
-        config.vm.provision "shell", inline: <<-SHELL
+  
+        # Correction: Appliquer les options à `node_config` et non `config`
+        node_config.vm.synced_folder ".", "/home/vagrant/workspace", type: "virtualbox"
+        
+        node_config.vm.provision "shell", inline: <<-SHELL
           ln -sf /home/vagrant/workspace/.env /home/vagrant/.env
-        SHELL      
-        # node_config.vm.synced_folder "./shared", "/home/vagrant/shared"
+        SHELL
       end
     end
   end
