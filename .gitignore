@@ -2,3 +2,4 @@
 .DS_Store
 .vagrant/
 script_rm_clean.sh
+setup_project.sh
