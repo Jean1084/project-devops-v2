@@ -12,7 +12,7 @@ This project sets up a Kubernetes cluster using Vagrant and VirtualBox. The clus
 
 3.  **MySQL Node**: Hosts a MySQL database for WordPress
 
-4.  **Registry Node**: Stores Docker images used by the other nodes [GitHub Pages](https://jean1084.github.io) - [GitHub Repo](https://github.com/Jean1084/Jean1084.github.io.git)
+4.  **Registry Node**: Stores Docker images used by the other nodes [GitHub Pages](https://registry-jean.github.io) - [GitHub Repo](https://github.com/Jean1084/registry-jean.github.io.git)
 
 - **Resources per Node**:
   - **1 CPU**
